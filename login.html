@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="style.css" rel="stylesheet"></link>
+	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+	<script>
+		function get(){
+			var email = document.getElementById("email").value;
+			var atpos = email.indexOf("@");
+			var dotpos = email.lastIndexOf(".");
+			if(atpos <1 || dotpos < atpos){
+				alert("invalid email id");
+			}
+			else{
+				alert("your email id is = "+ email);
+			}
+			var pass = document.getElementById("password").value;
+			var len = pass.length;
+			if(len > 6){
+				alert("your password is = "+ pass);
+			}
+			else{
+				alert(" password must be more than 6 character long ");
+			}
+	
+			
+		}
+	</script>
+    <title>Log In Form</title>
+  </head>
+  <body>
+      <form>
+      	<div class="form">
+			<h2>LOGIN </h2>
+				<p class="liw">Log In With</p>
+				<div class="icon">
+				<a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+				<a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+				<a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+				<a href="#"><ion-icon name="logo-google"></ion-icon></a>
+				<a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+				</div>
+				<h1>or</h1>
+				<input type="email" id="email" name="email" placeholder="Enter Email"/>
+				<input type="password" id="password" name="password" placeholder="Enter Password"/>
+				<button class="btnn" onclick="get();"><a href="#">Log In</a></button>
+				<p class="link">Don't Have An Account? <br>
+				<a href="#">Sign Up Here</a></p>
+			
+		</div>  
+    
+    </form>
+    
+  </body>
+</html>
